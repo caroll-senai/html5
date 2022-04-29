@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        img#banner{ width: 500px; height: 200px;}
+        div{text-align: center;}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cont = 1;
+
+        setInterval(mudarImagem,3000);
+
+        function mudarImagem(){
+            var elemento = document.getElementById("banner");
+            if(cont == 1){
+                elemento.src ="banner1.jpg";
+            }
+
+            if(cont == 2){
+                elemento.src ="banner2.jpg";
+            }
+
+            if(cont == 3){
+                elemento.src ="banner3.jpg";
+            }
+
+            if(cont == 4){
+                elemento.src ="banner4.jpg";
+            }
+
+            if(cont == 5){
+                elemento.src ="banner5.jpg";
+                cont = 0;
+            }
+            
+            cont++;
+        }
+    </script>
+   <div><img id="banner" src="banner1.jpg" alt=""></div>
+    
+</body>
+</html>
