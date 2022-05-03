@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function verificar(){
+            try{
+                var x=document.getElementById("valor").value;
+                if(x == "") throw "campo vazio";
+                if(isNaN(x))throw"não é um número válido";
+                if(x > 10) throw "baixo demais";
+                if(x < 5) throw "baixo demais";
+                document.getElementById("mesg").innerHTML="numero aceito!";
+
+            }catch(err){
+                var y=document.getElementById("mesg");
+                y.innerHTML="erro: " + err + ".";
+            }
+        }
+    </script>
+    <h1>exceções</h1>
+    <p>digite um número entre 5 e 10:</p>
+    <input id="valor" type="text">
+    <button type="button" onclick="verificar()">testar</button>
+    <p id="mesg"></p>
+</body>
+</html>
